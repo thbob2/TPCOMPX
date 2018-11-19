@@ -7,7 +7,7 @@
 int key(int x,int i){
 	return ((x%(int)(pow(10,i)))/(int)pow(10,i-1));
 }
-int *Triaux(int *T,int N,int i){
+void Triaux(int *T,int N,int i){
 	int *output =malloc(N*sizeof(int));
 	int cpt[10];
 	for(int j=0;j<10;j++) cpt[j]=0;
@@ -23,11 +23,21 @@ int *Triaux(int *T,int N,int i){
 	for(j=n-1;j>=0;j--){
 		output[cpt[key(T[j],i)]-1]=T[j];
 		cpt[key(T[j],i)]--;
-
 	}
-//still have to copy the output
+
+//copy the output into the main arraay T
+	for (int i=0;i<N;i++){
+		T[i] = output[i];
+	}
+// it s a procedure so we don't have to return anything
 }
-//still have to define the TriDist function
+
+void TriBase(int *T,int N,int k){
+	for (int i=0;i<K;i++){
+		Triaux(T,N,i);
+	}
+}
+
 
 int main(int argc, char const *argv[])
 {
