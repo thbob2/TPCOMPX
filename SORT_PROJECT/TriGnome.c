@@ -14,7 +14,7 @@ long *CreateArray(long N){
 	long *arr = malloc(N*sizeof(long));
 	for(int i =0;i<N;i++) {
 		// use srand(time(NULL)) in case rand is not generating random numbers
-		arr[i] = rand()%N +1;
+		arr[i] = N-i-1;
 	}
 	return arr;
 }
