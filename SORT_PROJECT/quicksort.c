@@ -36,7 +36,7 @@ void QuickSort(int *T,int p,int r){
 long partition(long *T,int d,int f){
 	int pivot; // we concider it's an array of integers
 	int i,j,x;
-	pivot = T(d);
+	pivot = T[d];
 	i = d; 
 	j = f;
 	do{
