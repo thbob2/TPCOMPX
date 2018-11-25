@@ -15,7 +15,7 @@ void towerOfHanoiRec(int n, char from_rod, char to_rod, char aux_rod){
 	towerOfHanoiRec(n-1,from_rod,aux_rod,to_rod);
 	printf("\nmoving disk %d from rod %c to rod %c",n,from_rod,to_rod);
 	towerOfHanoiRec(n-1,aux_rod,to_rod,from_rod);
-
+}
 // for the iterative function we must use a stack 
 struct Stack
 {	unsigned capacity;
