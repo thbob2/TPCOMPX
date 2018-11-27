@@ -4,7 +4,7 @@
 #include <time.h>
 #define  D 13
 
-long tables[D]={5*pow(10,4),pow(10,5),2*pow(10,5),4*pow(10,5),8*poz(10,5),
+long tables[D]={5*pow(10,4),pow(10,5),2*pow(10,5),4*pow(10,5),8*pow(10,5),
 			1.6*2*pow(10,6),3.2*pow(10,6),6.4*pow(10,6),12.8*pow(10,6),
 			25.6*pow(10,6),51.2*pow(10,6),1.024*pow(10,6),2.048*pow(10,6)};
 double deltas[D];
