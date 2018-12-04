@@ -57,7 +57,7 @@ int validation(int nbl,int nbc, int **mat,int *inst){
 	int sol = 1;
 	int i=0;
 	while((sol)&&(i<nbl)){
-		int clause_sat=0;
+		int clause_sat=0; //
 		int j=0;
 		while((!clause_sat)&&(j<nbc)){
 			if(( (inst[j] == 0) && ( mat[i][j] == 0) ) || (( inst[j] == 1) && ( mat[i][j] == 1))){
@@ -76,11 +76,12 @@ int main(int argc, char const *argv[])
 	C = buildmat(n,m);
 	instvec = buildinst(m);
 	//printints(instvec,m);
-	t1=clock();
-	int v=validation(n,m,C,instvec);
+	/*t1=clock();
+	
 	t2=clock();
 	double delta= (double)(t2-t1)/CLOCKS_PER_SEC;
-	printf("%lf\n",delta);
-
+	printf("%lf\n",delta);*/
+	printf("%d",validation(n,m,C,instvec));
+	
 	return 0;
 }
